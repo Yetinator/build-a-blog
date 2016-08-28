@@ -1,0 +1,43 @@
+
+
+<html>
+    <header>
+        <!TODO add some mad styles>
+        <style>
+            .post-title {
+                color: green;
+                font-family: Comic Sans MS, Times New Roman;
+                font-size: 26px;
+                font-weight: bold;
+            }
+            .post-body {
+                color: purple;
+                font-family: Charcoal, Times New Roman;
+            }
+            .error {
+                color: red;
+                font-family: Times New Roman;
+                
+            }
+            h1 {
+                font-size: 40px;
+                font-family: Times New Roman;
+                color: gray;
+            }
+            .time {
+                display: inline-block;
+            }
+        </style>
+        <title>blog!</title>
+    </header>
+    <body>
+        <h1>blog!</h1>
+        <h2><a href='/'>Main Page</a></h2>
+        <h2><a href='/newpost'>New Post</a></h2>
+        
+        {% block content %}
+        {% endblock %}
+        
+        
+    </body>
+</html>        

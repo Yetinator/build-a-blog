@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+        
+        <form method="post")
+            <label>
+                <div>title</div>
+                <input type="text" name="title" value="{{title}}">
+            </label>
+            
+            <label>
+                <div>Blog yo'Self!</div>
+                <textarea name="body" value="{{body}}"></textarea>
+            </label>
+            
+            <div class="error">{{error}}</div>
+            
+            <input type="submit"/>
+        </form>
+        
+        <hr>
+        {% for sub in submits %}
+            <div class="submit">
+                <a href="blog/{{sub.key().id()}}"><div class="post-title">{{sub.title}}</div></a>
+                <pre class="post-body">{{sub.body}}</pre>
+            </div>
+        {% endfor %}
+        
+{% endblock %}
+
