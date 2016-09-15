@@ -1,21 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
         
-        <form method="post")
-            <label>
-                <div>title</div>
-                <input type="text" name="title" value="{{title}}">
-            </label>
-            
-            <label>
-                <div>Blog yo'Self!</div>
-                <textarea name="body" value="{{body}}"></textarea>
-            </label>
-            
-            <div class="error">{{error}}</div>
-            
-            <input type="submit"/>
-        </form>
+
         
         <hr>
         {% for sub in submits %}
@@ -24,6 +10,13 @@
                 <pre class="post-body">{{sub.body}}</pre>
             </div>
         {% endfor %}
+        
+        <h3>Page number is {{page}}
+        {% for pg in range(1,totalPages+1) %}
+            <br>
+            <a href="/blog?page={{pg}}">page {{pg}}</a>
+        {% endfor %}
+        </h3>
         
 {% endblock %}
 
